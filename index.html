@@ -1,431 +1,117 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nomadnia Bali 23rd | Digital Trajectory</title>
+    <title>Nomadnia Bali 23rd | 旅と学びの軌跡</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Montserrat:wght@300;600&display=swap');
-        
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            scroll-behavior: smooth;
-        }
-        
-        .header-font {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 350px;
-            max-height: 400px;
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .workshop-btn.active {
-            background-color: #1e293b;
-            color: white;
-            transform: scale(1.05);
-        }
-
-        .scroll-hide::-webkit-scrollbar {
-            display: none;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Sans+JP:wght@300;400;600&display=swap');
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
     </style>
 </head>
-<body class="bg-[#f8f5f0] text-slate-800">
+<body class="bg-[#fcfbf9] text-slate-800">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass-card shadow-sm">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="header-font font-bold tracking-widest text-xl">NOMADNIA BALI 23rd</span>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#vision" class="hover:text-emerald-600 transition">VISION</a>
-                <a href="#workshops" class="hover:text-emerald-600 transition">WORKSHOPS</a>
-                <a href="#analysis" class="hover:text-emerald-600 transition">ANALYSIS</a>
-                <a href="#community" class="hover:text-emerald-600 transition">COMMUNITY</a>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md py-6 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+            <span class="font-bold tracking-tighter text-xl">NOMADNIA 23rd</span>
+            <div class="space-x-8 text-sm font-light uppercase tracking-widest hidden md:block">
+                <a href="#top" class="hover:text-emerald-700">Top</a>
+                <a href="#vision" class="hover:text-emerald-700">Vision</a>
+                <a href="#report" class="hover:text-emerald-700">Workshop</a>
+                <a href="#gallery" class="hover:text-emerald-700">Gallery</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-block px-4 py-1 mb-6 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold tracking-widest uppercase">
-                2026.04.01 - 04.30 @Ubud, Bali
+    <!-- Top (Hero) -->
+    <section id="top" class="h-screen flex items-center justify-center relative bg-slate-800">
+        <div class="relative z-10 text-center text-white px-6">
+            <p class="tracking-[0.3em] uppercase text-sm mb-4">April 2026 - Bali</p>
+            <h1 class="text-5xl md:text-7xl mb-6">Nomadnia Bali 23rd</h1>
+            <p class="text-lg opacity-90">1ヶ月で、人生の地図を描き直す旅。</p>
+        </div>
+    </section>
+
+    <!-- Vision / Community -->
+    <section id="vision" class="py-24 max-w-4xl mx-auto px-6">
+        <h2 class="text-4xl mb-12 text-center">Voices of the Term</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="p-8 border-l-4 border-emerald-600 bg-white shadow-sm">
+                <p class="italic text-slate-600 mb-4">"大切な人が必要な時にすぐ動ける自分でいたい。やりきる力を身につけ、継続する力・習慣化を身につける。"</p>
+                <p class="text-sm font-bold">— 参加者：小熊有美香</p>
             </div>
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">1ヶ月で人生をデザインする、<br><span class="text-emerald-600">旅と学びの軌跡。</span></h1>
-            <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-                将来的な柔軟な働き方の追求、環境を変えて自分らしく生きるため。<br>
-                10の職種体験を通じて「やり抜く力」と「ビジョン」を手に入れた30日間の全記録。
-            </p>
-            <div class="flex justify-center space-x-4">
-                <a href="#workshops" class="bg-slate-900 text-white px-8 py-3 rounded-full hover:bg-slate-800 transition shadow-lg">体験を振り返る</a>
+            <div class="p-8 border-l-4 border-emerald-600 bg-white shadow-sm">
+                <p class="italic text-slate-600 mb-4">"自分らしく気取ることなく生きられる自分になりたかった。先人の知恵の恩恵を受けて、自分が選択できる自分になりたい。"</p>
+                <p class="text-sm font-bold">— 参加者：篠澤秀哉</p>
             </div>
         </div>
     </section>
 
-    <!-- Vision Section -->
-    <section id="vision" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Our Vision</h2>
-                <p class="text-slate-500">旅の始まりに掲げた、それぞれの決意とありたい姿。</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="p-8 rounded-2xl bg-[#fdfaf5] border border-orange-100">
-                    <div class="text-3xl mb-4">🎯</div>
-                    <h3 class="text-xl font-bold mb-4">参加の理由</h3>
-                    <p class="text-slate-600 leading-relaxed">「大切な人が必要な時にすぐ動ける自分でいたい」「現状を打破したい」「場所を選ばない働き方を身につけたい」といった、切実かつ前向きな動機がバリの地に集結しました。</p>
+    <!-- Report / Workshops -->
+    <section id="report" class="py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-4xl mb-16 text-center">10 Workshops Journey</h2>
+            <div class="space-y-12 text-slate-700">
+                <div>
+                    <h3 class="text-xl font-bold text-emerald-800">1. Onboarding & Community Manager</h3>
+                    <p>決意の表明からスタート。心理的安全性の高い場作りを学ぶ。</p>
                 </div>
-                <div class="p-8 rounded-2xl bg-[#f5faf8] border border-emerald-100">
-                    <div class="text-3xl mb-4">✨</div>
-                    <h3 class="text-xl font-bold mb-4">ありたい姿</h3>
-                    <p class="text-slate-600 leading-relaxed">スキルを身につけるだけでなく、次に踏み出すための明確なビジョンを持ち、主体的に行動できる自分へ。完璧主義を捨て「まず完成させる」マインドの獲得を目指しました。</p>
+                <div>
+                    <h3 class="text-xl font-bold text-emerald-800">2. Web Writing</h3>
+                    <p>SEOの基礎と、届けるための文章術。WordPressでの構築。</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Workshop Section -->
-    <section id="workshops" class="py-20">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">10 Workshops</h2>
-                <p class="text-slate-500">各職種の体験を通じて得た、具体的な学びと成果。</p>
-            </div>
-
-            <!-- Workshop Navigation -->
-            <div class="flex overflow-x-auto pb-6 mb-10 space-x-2 scroll-hide">
-                <button onclick="showWorkshop('writing')" class="workshop-btn active whitespace-nowrap px-6 py-2 rounded-full border border-slate-200 transition text-sm">Webライティング</button>
-                <button onclick="showWorkshop('sns')" class="workshop-btn whitespace-nowrap px-6 py-2 rounded-full border border-slate-200 transition text-sm">SNS運用</button>
-                <button onclick="showWorkshop('efficiency')" class="workshop-btn whitespace-nowrap px-6 py-2 rounded-full border border-slate-200 transition text-sm">業務効率化</button>
-                <button onclick="showWorkshop('video')" class="workshop-btn whitespace-nowrap px-6 py-2 rounded-full border border-slate-200 transition text-sm">動画編集</button>
-                <button onclick="showWorkshop('webdesign')" class="workshop-btn whitespace-nowrap px-6 py-2 rounded-full border border-slate-200 transition text-sm">Webデザイン</button>
-                <button onclick="showWorkshop('webdev')" class="workshop-btn whitespace-nowrap px-6 py-2 rounded-full border border-slate-200 transition text-sm">Web制作</button>
-                <button onclick="showWorkshop('ad')" class="workshop-btn whitespace-nowrap px-6 py-2 rounded-full border border-slate-200 transition text-sm">広告運用</button>
-                <button onclick="showWorkshop('marketer')" class="workshop-btn whitespace-nowrap px-6 py-2 rounded-full border border-slate-200 transition text-sm">マーケター</button>
-                <button onclick="showWorkshop('ra')" class="workshop-btn whitespace-nowrap px-6 py-2 rounded-full border border-slate-200 transition text-sm">リモートアシスタント</button>
-                <button onclick="showWorkshop('cm')" class="workshop-btn whitespace-nowrap px-6 py-2 rounded-full border border-slate-200 transition text-sm">コミュニティマネージャー</button>
-            </div>
-
-            <!-- Workshop Detail Display -->
-            <div id="workshop-display" class="bg-white rounded-3xl shadow-xl overflow-hidden min-h-[500px] flex flex-col md:flex-row border border-slate-100">
-                <div id="ws-image" class="md:w-1/2 bg-slate-200 relative overflow-hidden flex items-center justify-center p-12">
-                    <div class="text-slate-400 text-center">
-                        <div class="text-6xl mb-4" id="ws-icon">✍️</div>
-                        <div class="text-sm uppercase tracking-widest font-bold" id="ws-tag">Skill Acquisition</div>
-                    </div>
+                <div>
+                    <h3 class="text-xl font-bold text-emerald-800">3. SNS Management (Instagram)</h3>
+                    <p>WHO/WHAT/HOWのフレームワークとブランディング。</p>
                 </div>
-                <div class="md:w-1/2 p-10 flex flex-col justify-center">
-                    <h3 id="ws-title" class="text-3xl font-bold mb-4">Webライティング</h3>
-                    <p id="ws-description" class="text-slate-600 mb-8 leading-relaxed">
-                        SEOライティングの基礎からWordPressの構築まで。読者の検索意図を汲み取り、情報を整理して届けるスキルの重要性を学びました。
-                    </p>
-                    
-                    <div class="space-y-6">
-                        <div>
-                            <h4 class="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-2">Key Takeaway</h4>
-                            <p id="ws-takeaway" class="text-sm text-slate-700 font-medium">外部公開設定の重要性、半角全角の統一など、細部へのこだわりが信頼を生む。</p>
-                        </div>
-                        <div>
-                            <h4 class="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-2">Mindset</h4>
-                            <p id="ws-mindset" class="text-sm text-slate-700 font-medium">「誰に」「何を」届けるか。相手の視点に立つ思考の訓練。</p>
-                        </div>
-                    </div>
+                <div>
+                    <h3 class="text-xl font-bold text-emerald-800">4. Graphic Design</h3>
+                    <p>Canvaを駆使したデザイン、名刺・ポスター作成。</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-emerald-800">5. Web Design & Production</h3>
+                    <p>FigmaとStudioを用いたWebサイト制作。</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-emerald-800">6. Marketer</h3>
+                    <p>ペルソナ分析とカスタマージャーニー設計。</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-emerald-800">7. Efficiency & Automation</h3>
+                    <p>Make, IFTTTによる業務の自動化。</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-emerald-800">8. Video Editing</h3>
+                    <p>CapCutを使ったVlog編集とストーリーテリング。</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-emerald-800">9. Remote Assistant</h3>
+                    <p>事務・秘書業務を通じた信頼構築と効率化。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Analysis Section -->
-    <section id="analysis" class="py-20 bg-slate-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Growth Analysis</h2>
-                <p class="text-slate-500">1ヶ月の変化をデータで可視化。</p>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="bg-white p-8 rounded-3xl shadow-sm">
-                    <h3 class="text-xl font-bold mb-6 text-center">Nomad Skills Radar</h3>
-                    <div class="chart-container">
-                        <canvas id="skillsRadar"></canvas>
-                    </div>
-                    <p class="text-xs text-slate-400 mt-6 leading-relaxed">
-                        ※Web制作、デザイン、効率化など、各職種への適応度と習得意欲を独自にスコア化したものです。
-                    </p>
-                </div>
-                <div class="space-y-8">
-                    <div class="bg-white p-8 rounded-3xl shadow-sm">
-                        <h3 class="text-xl font-bold mb-6">Learning Intensity Curve</h3>
-                        <div class="chart-container">
-                            <canvas id="learningLine"></canvas>
-                        </div>
-                    </div>
-                    <div class="p-6 bg-emerald-900 text-white rounded-2xl shadow-lg">
-                        <h4 class="font-bold mb-2">💡 総括</h4>
-                        <p class="text-sm text-emerald-100 leading-relaxed">
-                            前半は各スキルの習得に翻弄されましたが、後半にかけて「業務効率化」や「マーケティング」といった横断的な思考が身につき、学びの質が向上。完璧を目指さず「まず形にする」ことで成長速度が最大化されました。
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <!-- Gallery -->
+    <section id="gallery" class="py-24 max-w-6xl mx-auto px-6">
+        <h2 class="text-4xl mb-12 text-center">Memories in Bali</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <img src="1E65755D-C3EC-4D89-A087-0435628F0B32.jpg" alt="Memory" class="w-full h-64 object-cover rounded-lg shadow">
+            <img src="3D1FCE97-EED4-44E2-8959-54675666E5BE.jpg" alt="Memory" class="w-full h-64 object-cover rounded-lg shadow">
+            <img src="3D40DF32-A9E6-4119-9055-1DB37F5AA19E.jpg" alt="Memory" class="w-full h-64 object-cover rounded-lg shadow">
+            <img src="3f1c24c7-94d1-4ee5-a3a4-7745e38c3be4.jpg" alt="Memory" class="w-full h-64 object-cover rounded-lg shadow">
+            <img src="4D37FE4C-AB21-4012-BA5F-EDF312B3909C.jpg" alt="Memory" class="w-full h-64 object-cover rounded-lg shadow">
+            <img src="5C09424A-5D32-487E-A256-4D71F2745061.jpg" alt="Memory" class="w-full h-64 object-cover rounded-lg shadow">
+            <img src="6C0CD702-6581-465D-B4E5-D2FA71749BE2.jpg" alt="Memory" class="w-full h-64 object-cover rounded-lg shadow">
+            <img src="6F07EE69-E124-4664-A7BC-10E8CCA95F7F.jpg" alt="Memory" class="w-full h-64 object-cover rounded-lg shadow">
         </div>
     </section>
 
-    <!-- Community Section -->
-    <section id="community" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Connections</h2>
-                <p class="text-slate-500">共に走り抜けた23期メンバーとの絆。</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Highlighted Quote 1 -->
-                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 flex flex-col justify-between">
-                    <p class="text-slate-600 italic mb-6">「できない理由ではなく、どうすればできるかを考える根気が、自動化ツール（Make等）の習得には不可欠だった。」</p>
-                    <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-full bg-orange-200"></div>
-                        <div>
-                            <p class="text-sm font-bold">業務効率化WSの学び</p>
-                            <p class="text-xs text-slate-400">Mindset</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Highlighted Quote 2 -->
-                <div class="p-8 rounded-3xl bg-emerald-50 border border-emerald-100 flex flex-col justify-between">
-                    <p class="text-slate-600 italic mb-6">「SNS運用はWHO/WHAT/HOWが全て。自分のブランドをどう定義するかを突き詰められた。」</p>
-                    <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-full bg-emerald-200"></div>
-                        <div>
-                            <p class="text-sm font-bold">SNS運用WSの学び</p>
-                            <p class="text-xs text-slate-400">Marketing</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Highlighted Quote 3 -->
-                <div class="p-8 rounded-3xl bg-indigo-50 border border-indigo-100 flex flex-col justify-between">
-                    <p class="text-slate-600 italic mb-6">「動画は日常。完璧を捨てて完成させることで、初めて自分の世界が動き出した。」</p>
-                    <div class="flex items-center space-x-3">
-                        <div class="w-10 h-10 rounded-full bg-indigo-200"></div>
-                        <div>
-                            <p class="text-sm font-bold">動画編集WSの学び</p>
-                            <p class="text-xs text-slate-400">Creative</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-16 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="header-font font-bold text-white text-2xl tracking-widest mb-8">NOMADNIA BALI 23rd</h2>
-            <p class="text-sm mb-12 max-w-lg mx-auto leading-relaxed">バリでの30日間は終わりではなく、ここからが旅の始まり。学んだ全てのスキルは、これからの自由な人生を支える武器になる。</p>
-            <div class="pt-8 border-t border-slate-800 text-xs uppercase tracking-widest">
-                &copy; 2026 Designed for Life. Bali Term.
-            </div>
-        </div>
+    <footer class="py-12 text-center text-xs text-slate-500 bg-white">
+        &copy; 2026 Nomadnia Bali 23rd Term Memory Report
     </footer>
-
-    <script>
-        // Data Structure for Workshops
-        const workshopData = {
-            writing: {
-                title: "Webライティング",
-                icon: "✍️",
-                tag: "Logical Expression",
-                desc: "SEOの基本構造から読者の行動を促す記事設計まで。バリのネット環境と戦いながらWordPressを構築した日々。",
-                takeaway: "外部公開設定の確認、タイトルの引き、半角全角の統一など、読者への『誠実さ』が成果に直結すること。",
-                mindset: "『誰のために書くのか』という目的意識の徹底。"
-            },
-            sns: {
-                title: "SNS運用",
-                icon: "📱",
-                tag: "Personal Branding",
-                desc: "WHO (誰に), WHAT (何を), HOW (どのように) のフレームワークを徹底。Canvaを用いた視覚的な一貫性の重要性。",
-                takeaway: "ターゲットの悩みを深く掘り下げ、自分にしか提供できない価値を言語化すること。",
-                mindset: "「発信はギフト」。誰かの役に立つ情報の集合体がアカウントになる。"
-            },
-            efficiency: {
-                title: "業務効率化",
-                icon: "⚡",
-                tag: "Process Optimization",
-                desc: "Make (Integromat) や IFTTT を活用した自動化。複雑なシナリオ構築に挑み、エラーを克服するプロセス。",
-                takeaway: "ツールの知識以上に、最後まで原因を突き止めて解決する「根気」が最大のスキルであること。",
-                mindset: "「面倒くさい」を「仕組み」に変える執着心。"
-            },
-            video: {
-                title: "動画編集",
-                icon: "🎬",
-                tag: "Storytelling",
-                desc: "Vlog制作を通じて学ぶ、カット、テロップ、BGMの効果。CapCutやPremiereの基本操作の習得。",
-                takeaway: "100点の素材を待つのではなく、手元にある素材を組み合わせて「物語」として完成させること。",
-                mindset: "「完成は最大の成功」。完璧主義はクリエイティブの敵。"
-            },
-            webdesign: {
-                title: "Webデザイン",
-                icon: "🎨",
-                tag: "Visual Language",
-                desc: "Figmaを使用したバナーやランディングページの設計。配色の心理学やフォントの選択が与える影響。",
-                takeaway: "デザインは「装飾」ではなく「情報設計」であるという視点の獲得。",
-                mindset: "センスではなく、論理に基づいたレイアウトの構築。"
-            },
-            webdev: {
-                title: "Web制作",
-                icon: "💻",
-                tag: "System Building",
-                desc: "HTML/CSS、およびノーコードツールを用いたサイト構築。ドメインやサーバーの基礎知識の理解。",
-                takeaway: "画面の裏側にある構造を理解することで、エンジニア視点でのディレクションが可能になったこと。",
-                mindset: "小さなエラーを一つずつ潰す、論理的思考の積み上げ。"
-            },
-            ad: {
-                title: "広告運用",
-                icon: "📈",
-                tag: "Performance Marketing",
-                desc: "Meta広告やGoogle広告の仕組み。予算配分やABテストによる効果最大化のプロセス。",
-                takeaway: "データに基づいて仮説を立て、検証を回す「数字に強い」マーケティング感覚。",
-                mindset: "感情ではなく、事実（データ）に基づいて意思決定を行う。"
-            },
-            marketer: {
-                title: "マーケター",
-                icon: "🎯",
-                tag: "Market Analysis",
-                desc: "市場分析、競合調査を通じた商品設計。顧客が対価を払う「本質的な価値」の定義。",
-                takeaway: "良いものを作るだけでなく「どう売るか」の導線設計がビジネスの肝であること。",
-                mindset: "顧客の悩み（ペインポイント）の解像度を極限まで高める。"
-            },
-            ra: {
-                title: "リモートアシスタント",
-                icon: "🤝",
-                tag: "Partner Support",
-                desc: "チャットコミュニケーション、タスク管理、秘書業務。非対面での信頼関係構築スキル。",
-                takeaway: "相手の時間を奪わず、期待を1%上回るアウトプットを出し続けるための工夫。",
-                mindset: "先回りして考え、相手の負担を最小限にするホスピタリティ。"
-            },
-            cm: {
-                title: "コミュニティマネージャー",
-                icon: "🏘️",
-                tag: "Facilitation",
-                desc: "コミュニティの活性化、イベント企画、心理的安全性の構築方法。",
-                takeaway: "個々の才能が混ざり合い、相乗効果を生むための「場作り」の奥深さ。",
-                mindset: "自分が主役ではなく、メンバーを主役にするための黒子としての視点。"
-            }
-        };
-
-        function showWorkshop(key) {
-            const data = workshopData[key];
-            const display = document.getElementById('workshop-display');
-            
-            // Animation out
-            display.style.opacity = '0';
-            display.style.transform = 'translateY(10px)';
-            
-            setTimeout(() => {
-                document.getElementById('ws-title').innerText = data.title;
-                document.getElementById('ws-icon').innerText = data.icon;
-                document.getElementById('ws-tag').innerText = data.tag;
-                document.getElementById('ws-description').innerText = data.desc;
-                document.getElementById('ws-takeaway').innerText = data.takeaway;
-                document.getElementById('ws-mindset').innerText = data.mindset;
-
-                // Update active button
-                document.querySelectorAll('.workshop-btn').forEach(btn => btn.classList.remove('active'));
-                const activeBtn = Array.from(document.querySelectorAll('.workshop-btn')).find(btn => btn.innerText.includes(data.title.substring(0,2)));
-                if(activeBtn) activeBtn.classList.add('active');
-
-                // Animation in
-                display.style.opacity = '1';
-                display.style.transform = 'translateY(0)';
-            }, 300);
-        }
-
-        // Initialize Charts
-        window.onload = function() {
-            // Radar Chart
-            const radarCtx = document.getElementById('skillsRadar').getContext('2d');
-            new Chart(radarCtx, {
-                type: 'radar',
-                data: {
-                    labels: ['ライティング', 'デザイン', '制作', '効率化', 'マーケティング', 'コミュニティ'],
-                    datasets: [{
-                        label: '1ヶ月後の習得度',
-                        data: [85, 70, 75, 80, 85, 90],
-                        backgroundColor: 'rgba(16, 185, 129, 0.2)',
-                        borderColor: '#10b981',
-                        borderWidth: 2,
-                        pointBackgroundColor: '#10b981'
-                    }, {
-                        label: '開始前',
-                        data: [30, 20, 15, 20, 40, 60],
-                        backgroundColor: 'rgba(148, 163, 184, 0.1)',
-                        borderColor: '#94a3b8',
-                        borderWidth: 1,
-                        pointBackgroundColor: '#94a3b8'
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        r: {
-                            beginAtZero: true,
-                            max: 100,
-                            ticks: { display: false }
-                        }
-                    },
-                    plugins: {
-                        legend: { position: 'bottom' }
-                    }
-                }
-            });
-
-            // Line Chart
-            const lineCtx = document.getElementById('learningLine').getContext('2d');
-            new Chart(lineCtx, {
-                type: 'line',
-                data: {
-                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
-                    datasets: [{
-                        label: '学習の熱量と密度',
-                        data: [60, 85, 75, 95],
-                        borderColor: '#1e293b',
-                        tension: 0.4,
-                        fill: false,
-                        pointRadius: 5,
-                        pointHoverRadius: 8
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: { beginAtZero: true, max: 100 }
-                    },
-                    plugins: {
-                        legend: { display: false }
-                    }
-                }
-            });
-            
-            // Initial transition
-            document.getElementById('workshop-display').style.transition = 'all 0.4s ease';
-        };
-    </script>
 </body>
 </html>
